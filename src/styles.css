@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+.miAvatar {
+  width: 3rem;
+  border: salmon solid 0.5px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 5px;
+}
+.textSize{
+  font-size: 2rem;
+}
+body {
+  /* 1 Ubicación de la imagen */
+  background-image: url('../src/assets/p1.jpg');
+  /* 2 centrada, vertical y horizontalmente */
+  background-position: center center;
+  /* 3 que no se repita */
+  background-repeat: no-repeat;
+  /* fijada en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+  background-attachment: fixed;
+  /* 4 se reescale automáticamente con el cambio del ancho de ventana del navegador */
+  background-size: cover;
+  /* b Se mueste un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+  background-color: rgb(243, 104, 104);
+  /*b para desplazar la imagen*/
+  height: 100vh;
+  opacity:0.75;
+  }

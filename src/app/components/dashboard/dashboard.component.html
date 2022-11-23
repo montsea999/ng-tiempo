@@ -1,0 +1,62 @@
+<div *ngIf="error" class="alert alert-dismissible alert-danger text-center">
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  <strong>Creo que pusiste mal la ciudad, no? </strong>
+</div>
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-lg-3 offset-lg-1">
+      <!--<img [src]="srcImgDashboard" width="90%" heigth="90%" alt="imagen" class="text-start">-->
+
+    </div>
+    <div class="col-lg-4 mb-5 mt-3">
+      <div class="form-group mb-3">
+        <label for="ciudad" class="form-label h4 text-center text-light">Ciudad:</label>
+        <input type="text" [(ngModel)]="ciudad" name="ciudad" id="ciudad" class="form-control rounded textSize"
+          placeholder="Barcelona..">
+
+          <div class="spinner-border text-primary mt-3" *ngIf="loading" role="status">
+            <span class="visually-hidden"></span>
+          </div>
+
+          <button [disabled]="ciudad===''" (click)="getTiempo()" style="width:100%"
+          class="btn btn-dark btn-block mt-1 textSize">
+
+         OBTENER EL TIEMPO</button>
+
+
+      </div>
+
+    </div>
+    <div *ngIf="query" class="bg-transparent bg-blue-300 text-light card mt-5">
+      <div class="card-head bg-dark">
+        <div class="row">
+
+          <div class="col-lg-4 offset-lg-1 text-center mt-3">
+            <p><b class="text-start h4 mr-1">Temperatura máxima: {{temperaturaMax | number:'2.1-2' }} Cº</b></p>
+        <p><b class="text-start h4 mr-1">Temperatura mínima: {{temperaturaMin | number:'2.1-2' }} Cº</b></p>
+          </div>
+          <div class="col-lg-4 text-center mt-3">
+            <p><b class="text-start h4 mr-1">Velocidad Viento: {{velViento | number:'2.2' }} </b></p>
+        <p><b class="text-start h4 mr-1">Dirección Viento: {{dirViento | number:'2.0' }} </b></p>
+
+          </div>
+          <div class="col-lg-3 text-center mt-3 mb-1">
+            <p><b class="text-start h4">Presión: {{presion | number:'2.1-2' }}</b></p>
+            <span class="badge bg-primary"><p><b class="text-start h5 mx-2">Tiempo: {{tiempo}}</b></p></span>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+    </div>
+  </div>
