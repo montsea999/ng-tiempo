@@ -40,7 +40,7 @@ export class DashboardComponent implements OnInit {
 
       this.presion = data.main.pressure;
       this.tiempo = data.weather[0].main;
-      //si cambiamos icon por main podremos mostrar el icono correspondiente al tiempo (habría que crear
+      //si cambio icon por main podreo mostrar el icono correspondiente al tiempo (habría que crear
       //un array de imagenes y setear el src segun codigo recibido de la API)
 
     }, error =>{
