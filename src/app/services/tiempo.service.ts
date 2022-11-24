@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class TiempoService {
   //https://openweathermap.org
-  //mi Api call según la API, para hacer una llamada por ciudad es 'https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}'
+  //Api call para hacer una llamada por el criterio 'ciudad' es 'https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}'
   //cambio la url quitando q={city name} y {API key} ya que los concatenaré luego
   //ojo para subirlo a un servidor he cambiado http por https para que la request sea segura
   url = 'https://api.openweathermap.org/data/2.5/weather?q=';
